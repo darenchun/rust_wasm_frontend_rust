@@ -1,2 +1,3 @@
-pub mod second_page;
-pub mod page_route;
+pub mod secure;
+pub mod not_found;
+pub mod home;
