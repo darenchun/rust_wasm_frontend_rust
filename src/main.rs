@@ -6,6 +6,9 @@ use yew_router::prelude::*;
 
 #[function_component(App)]
 fn app() -> Html {
+    /* init wasm_logger for console.log */
+    wasm_logger::init(wasm_logger::Config::default());
+
     /* set application to utilize "cookies". */
     
     /* run!! */

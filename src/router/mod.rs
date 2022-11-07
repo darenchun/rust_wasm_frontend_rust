@@ -1,17 +1,17 @@
 use crate::pages::home::Home;
+use crate::pages::login::Login;
 use crate::pages::not_found::NotFound;
 use crate::pages::secure::Secure;
-use crate::pages::login::Login;
+use crate::pages::get_from_backend::GetFromBackend;
 use yew::{html, Html};
 use yew_router::prelude::*;
 
-/* List of pages routes */
+/* Enum of pages routes */
 #[derive(Clone, Routable, PartialEq)]
 pub enum Route {
     
-    // url for the page and define a Name for the component that should be used.
-    #[at("/")]
-    Home, // -> used for expressing component in rust module.
+    #[at("/")] // -> url for the page and define a Name for the component that should be used.
+    Home, // -> used for expressing a component in rust module. Think of this as a representation of a page.
 
     #[at("/secure")]
     Secure,
@@ -22,14 +22,20 @@ pub enum Route {
 
     #[at("/login")]
     Login,
+
+    #[at("/get_from_backend")]
+    GetFromBackend,
 }
 
-/* matching url addresses using match */
+
+
+/* Actual pages dispatching with Route */
 pub fn switch(routes: &Route) -> Html {
     match routes {
-        Route::Home => html! { <Home/> }, // -> should return html! macro which 'yew' provides.
+        Route::Home => html! { <Home initial_contents="initial_content" something_was_sent_back = ""/> },
         Route::Secure => html! { <Secure/> },
         Route::NotFound => html! {<NotFound/>},
         Route::Login => html! { <Login /> },
+        Route::GetFromBackend => html! { <GetFromBackend /> },
     }
 }
