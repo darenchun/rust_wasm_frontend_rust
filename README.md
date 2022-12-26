@@ -10,3 +10,8 @@ So if you want a template that serves specific area, you might have to adjust an
 
 [starting project]
 trunk serve --open
+
+[##additional tips!!##]
+1. if you are having difficulties with auto-completion of rust-analyzer, try doing this.
+- press 'ctrl+shift+p'
+- type 'rust-analyzer: restart server' and press enter.

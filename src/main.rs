@@ -3,6 +3,7 @@ mod router;
 use yew::prelude::*;
 use yew::{html};
 use yew_router::prelude::*;
+mod data_types;
 
 #[function_component(App)]
 fn app() -> Html {
@@ -24,3 +25,5 @@ fn app() -> Html {
 fn main() {
     yew::start_app::<App>();
 }
+
+
