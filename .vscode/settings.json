@@ -1,0 +1,7 @@
+{
+    "typescript.inlayHints.parameterTypes.enabled": false,
+    "rust-analyzer.rustfmt.rangeFormatting.enable": true,
+    "rust-analyzer.restartServerOnConfigChange": true,
+    "rust-analyzer.hover.actions.references.enable": true,
+    "rust-analyzer.completion.privateEditable.enable": true
+}
