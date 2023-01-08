@@ -1,5 +1,5 @@
-use yew::prelude::*;
 use serde::Deserialize;
+use yew::prelude::*;
 
 #[derive(Clone, PartialEq, Deserialize)]
 pub struct Video {
@@ -12,8 +12,9 @@ pub struct Video {
 #[derive(Properties, PartialEq)]
 pub struct VideosListProps {
     pub videos: Vec<Video>,
-    pub on_click: Callback<Video>
+    pub on_click: Callback<Video>,
 }
+
 
 #[function_component(VideosList)]
 pub fn videos_list(VideosListProps { videos, on_click }: &VideosListProps) -> Html {
@@ -29,7 +30,9 @@ pub fn videos_list(VideosListProps { videos, on_click }: &VideosListProps) -> Ht
                 })
             };
             html! {
+                <>
                 <p key={video.id} onclick = {on_video_select}>{format!("{}: {}", video.speaker, video.title)}</p>
+                </>
             }
         })
         .collect()

@@ -1,2 +1,2 @@
 pub mod video;
-pub mod videoDetail;
+pub mod video_detail;
